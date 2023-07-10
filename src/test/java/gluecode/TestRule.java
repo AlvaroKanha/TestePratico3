@@ -23,6 +23,7 @@ public class TestRule {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.navigate().to(URL);
+		carregarMassas();
 	}
 
 	@After

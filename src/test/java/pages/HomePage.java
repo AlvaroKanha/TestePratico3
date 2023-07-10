@@ -3,9 +3,9 @@ package pages;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import elements.HomeElementsMap;
+import elements.HomePageElementsMap;
 
-public class HomePage extends HomeElementsMap {
+public class HomePage extends HomePageElementsMap {
 	public void validarHome () {
 		PageFactory.initElements(driver, this);
 		wait.until(ExpectedConditions.visibilityOf(loadingOn));
@@ -17,5 +17,12 @@ public class HomePage extends HomeElementsMap {
 		btnSpecialOffer.click();
 		aguardaScroll ();
 	}
+	
+	public void clicarBtnSeeOffer() {
+		wait.until(ExpectedConditions.elementToBeClickable(btnSeeOffer));
+		btnSeeOffer.click();
+	}
+	
+	
 }
 
