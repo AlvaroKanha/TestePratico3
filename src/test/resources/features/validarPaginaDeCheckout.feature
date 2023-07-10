@@ -2,8 +2,8 @@ Feature: bla bla bla
 
 Scenario: Pesquisar produto
 Given acessar pagina Advantage Shopping 
-When informar produto correspondente ao banco de dados no campo busca
-And clicar na lupa de pesquisa
+When clicar na lupa de pesquisa
+And informar produto correspondente ao banco de dados no campo busca
 Then visualiza o resultado da pesquisa com o produto informado
 
 Scenario: 

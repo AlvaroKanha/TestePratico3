@@ -23,6 +23,18 @@ public class HomePage extends HomePageElementsMap {
 		btnSeeOffer.click();
 	}
 	
+	public void abrirPesquisa() {
+		
+		wait.until(ExpectedConditions.elementToBeClickable(btnSearch));
+		btnSearch.click();
+	}
+	
+	public void pesquisarProduto() {
+		wait.until(ExpectedConditions.visibilityOf(searchImputText));
+		searchImputText.sendKeys(massa.getNAME_PRODUCT());
+		
+	}
+	
 	
 }
 

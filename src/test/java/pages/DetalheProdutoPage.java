@@ -53,5 +53,6 @@ public class DetalheProdutoPage extends DetalheProdutoElementsMap {
 		btnCart.click();
 		Assert.assertEquals(massa.getCOLOR(), checkColorCart.getAttribute("title"));
 	}
+	
 
 }

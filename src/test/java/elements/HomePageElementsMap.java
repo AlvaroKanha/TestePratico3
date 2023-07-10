@@ -14,7 +14,7 @@ public class HomePageElementsMap extends UtilsElements {
 	@FindBy(xpath = "//body/div[@class='loader'][contains(@style, 'display: block')]")
 	protected WebElement loadingOn;
 	
-	@FindBy(xpath = "//*[@id=\"search\"]")
+	@FindBy(xpath = "//a[@title='SEARCH']")
 	protected WebElement btnSearch;
 	
 	@FindBy(xpath = "//*[@id=\"autoComplete\"]")
