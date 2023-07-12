@@ -13,13 +13,14 @@ public class HomePageElementsMap extends UtilsElements {
 
 	@FindBy(xpath = "//body/div[@class='loader'][contains(@style, 'display: block')]")
 	protected WebElement loadingOn;
-	
+
 	@FindBy(xpath = "//a[@title='SEARCH']")
 	protected WebElement btnSearch;
-	
-	@FindBy(xpath = "//*[@id=\"autoComplete\"]")
+
+	@FindBy(xpath = "//div[@id='search']//input")
 	protected WebElement searchImputText;
-	
-	
+
+	@FindBy(xpath = "//p[contains(text(), 'HP PAVILION 15Z TOUCH LAPTOP')]/..")
+	protected WebElement resultSearch;
 
 }

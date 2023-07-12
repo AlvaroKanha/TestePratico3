@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -31,11 +32,30 @@ public class HomePage extends HomePageElementsMap {
 
 		wait.until(ExpectedConditions.elementToBeClickable(btnSearch));
 		btnSearch.click();
+
 	}
 
-	public void pesquisarProduto() {
+	public void inserirProdutoPesquisa() {
 		wait.until(ExpectedConditions.visibilityOf(searchImputText));
 		searchImputText.sendKeys(massa.getNAME_PRODUCT());
+	}
+
+	public void clicarProdutoPesquisado() {
+		String space = " ";
+
+		searchImputText.sendKeys(space);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class = 'top6Products']//a[contains(@class, 'product')][2]")));
+
+		searchImputText.sendKeys(space);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class = 'top6Products']//a[contains(@class, 'product')]")));
+
+		searchImputText.sendKeys(space);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class = 'top6Products']//a[contains(@class, 'product')]//p[text() = 'HP PAVILION 15Z TOUCH LAPTOP']/..")));
+
+		searchImputText.sendKeys(space);
+		wait.until(ExpectedConditions.elementToBeClickable(resultSearch));
+		resultSearch.click();
+
 	}
 
 }

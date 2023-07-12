@@ -1,4 +1,4 @@
-Feature: bla bla bla bla
+Feature: Cenario 4 Remover produto do carrinho de compras
 
 Scenario: Remover produto do carrinho
 Given acessar pagina Advantage Shopping 

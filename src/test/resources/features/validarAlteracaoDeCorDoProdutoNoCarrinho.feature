@@ -1,4 +1,4 @@
-Feature: bla
+Feature: Cenario 2 Validar alteracao de cor do produto no carrinho
 
 Scenario: Alterar cor do produto
 Given acessar pagina Advantage Shopping
